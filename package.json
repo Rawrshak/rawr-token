@@ -1,0 +1,31 @@
+{
+  "name": "rawr-token",
+  "version": "1.0.0",
+  "description": "This project will contain the implementation of the RAWR token smart contracts",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcbsumid/rawr-token.git"
+  },
+  "author": "",
+  "scripts": {
+    "server": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.2",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.6",
+    "@typechain/ethers-v5": "^7.2.0",
+    "@typechain/hardhat": "^2.3.1",
+    "typechain": "^5.2.0"
+  },
+  "dependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15"
+  }
+}
