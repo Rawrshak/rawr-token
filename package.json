@@ -16,6 +16,7 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "@openzeppelin/contracts": "^4.3.2",
     "@typechain/ethers-v5": "^7.2.0",
     "@typechain/hardhat": "^2.3.1",
@@ -23,9 +24,11 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.7",
     "hardhat": "^2.6.6",
-    "typechain": "^5.2.0"
+    "typechain": "^5.2.0",
+    "web3": "^1.5.3"
   },
   "dependencies": {
+    "bn.js": "^5.2.0",
     "@eth-optimism/contracts": "^0.4.13",
     "@openzeppelin/test-helpers": "^0.5.15",
     "dotenv": "^10.0.0"

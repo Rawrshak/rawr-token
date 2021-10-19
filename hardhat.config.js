@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('@typechain/hardhat');
 require('@nomiclabs/hardhat-ethers');
+require("@nomiclabs/hardhat-web3");
 
 // Load environment variables from .env
 require('dotenv').config();

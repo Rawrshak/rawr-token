@@ -4,7 +4,6 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165Storage.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
-// import "@eth-optimism/contracts/libraries/standards/IL2StandardERC20.sol";
 import "./IL2StandardERC20Latest.sol";
 
 contract L2NativeRawrshakERC20Token is IL2StandardERC20Latest, ERC20, AccessControl {
@@ -27,19 +26,19 @@ contract L2NativeRawrshakERC20Token is IL2StandardERC20Latest, ERC20, AccessCont
     )
         ERC20(_name, _symbol)
     {
-        // Todo: _setupRole for the message sender address
         // Contract Deployer is now the owner and can set roles
-        // _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
 
-        // mint initial supply of tokens
-        // _mint(msg.sender, _initialSupply);
+        // Save L2 Bridge (if any)
         l2Bridge = _l2Bridge;
 
         // L2 Bridge should be able to mint/burn assets
         grantRole(MINTER_ROLE, l2Bridge);
         grantRole(BURNER_ROLE, l2Bridge);
 
-        // _registerInterface(LibInterfaces.INTERFACE_ID_TOKENBASE);
+        // mint initial supply, if any
+        _mint(msg.sender, _initialSupply);
+
         emit TokenCreated(address(this), _name, _symbol, _initialSupply);
     }
 
