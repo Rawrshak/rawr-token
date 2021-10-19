@@ -6,3 +6,6 @@ build
 cache
 artifacts
 typechain
+
+# ignore .env files
+.env
