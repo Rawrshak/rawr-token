@@ -29,16 +29,14 @@ module.exports = {
       accounts: {
         mnemonic: 'test test test test test test test test test test test junk'
       },
-      gasPrice: 0,
-      ovm: true // This sets the network as using the ovm and ensure contract will be compiled against that.
+      gasPrice: 0
     },
     optimism_kovan: {
       chainId: 69,
       url: 'https://kovan.optimism.io',
       accounts: [process.env.KOVAN_PRIVATE_KEY],
-      gasPrice: 15000000,
-      ovm: true // This sets the network as using the ovm and ensure contract will be compiled against that.
+      gasPrice: 15000000
     }
   },
-  solidity: "0.8.3",
+  solidity: "0.8.3"
 };
