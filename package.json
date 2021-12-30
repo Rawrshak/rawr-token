@@ -1,11 +1,14 @@
 {
-  "name": "rawr-token",
+  "name": "@rawrshak/rawr-token",
   "version": "1.0.0",
   "description": "This project will contain the implementation of the RAWR token smart contracts",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gcbsumid/rawr-token.git"
+    "url": "git+https://github.com/Rawrshak/rawr-token.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "author": "",
   "scripts": {
